@@ -16,7 +16,7 @@
  # Uses
   1. Can be used for creative and fun purposes.
   2. Can sometimes used for reproducing or generating the text for larger datasets.
-  3. Literature purpose like understanding and analysing a sertain poetric style.
+  3. Literature purpose like understanding and analysing a certain poetric style.
   
  # What's unique?
   1. Unlike many poetry generation, we also built a hindi poetry text generation model.
