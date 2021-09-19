@@ -34,7 +34,7 @@
   **need some matter on hindi model**
   
  # Installation
-  The `app.py` file should be installed and download the model from ~~this link~~. The trained_model folder
+  The `app.py` file should be installed and download the model from [this link](https://drive.google.com/drive/folders/1kbYcl0piU_2O5SG7ndIFGDYH4TDuLd1c?usp=sharing). The trained_model folder
   should specify the path to your downloaded model. Finally `streamlit run app.py` in your terminal and enjoy
   the app.
   
