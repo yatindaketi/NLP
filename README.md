@@ -34,6 +34,14 @@
   The hindi poetry generation is built with tensorflow keras. 
   The front-end is simply handled by streamlit.
   
+  [Here](https://colab.research.google.com/drive/1xhwGXiygKPy-C8Hh2Pf4BB4X81BlKL9f) is an example of how aitextgen is fine tuned.
+  [Here](https://colab.research.google.com/drive/1-FhswLVmySN73gHGKzBKI0sXBw0tXh3_) is an example on how to train your own model using tensorflow keras.
+  
+ # A peek into our project
+ 
+  ![hindiNLP](https://user-images.githubusercontent.com/79344352/134283716-672890d4-33bb-470e-a413-cfd3bb534b3d.PNG)
+  
+  ![EnglishNLP](https://user-images.githubusercontent.com/79344352/134283837-23ed5f0c-f2f3-4000-be23-2673e91d9b9b.PNG)
   
  # Installation
   The `app.py` file should be installed and download the model from [this link](https://drive.google.com/drive/folders/1kbYcl0piU_2O5SG7ndIFGDYH4TDuLd1c?usp=sharing). The trained_model folder
@@ -43,7 +51,10 @@
   Finally `streamlit run app.py` in your terminal and enjoy
   the app.
  
-  
+  ![FALLABOUT SRM](https://user-images.githubusercontent.com/79344352/134283027-1cb8a8c1-f6b9-4f86-85ca-5ce9b9fef05e.PNG)
+   
+   This is how Your code should look while running on local.
+ 
  # Future works
   1. Planning on including a translator to slide easily between languages.
   2. Introduce more poet based model in many languages.  
