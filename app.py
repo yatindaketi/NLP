@@ -17,9 +17,11 @@ import numpy as np
 import pickle
 # importing the open-source library
 # importing streamlit for front-end
+st.title('Hinglish Poetry')
+
 option_name = ["Hindi","English"]
-option = st.radio(
-     'Hindi/English',
+option = st.sidebar.radio(
+     'Select a language',
     option_name)
 
 if option == 'Hindi':
@@ -35,10 +37,10 @@ if option == 'Hindi':
     model = keras.models.load_model('trained_model_hindi/hindipoet32_5.h5')
 
 
-    def gen_poem(model, length, w2i, i2w, start = ' ', lines = 4):
+    def gen_poem(model, length, w2i, i2w, start = ' ', lines = 1):
         ipseq = [w2i[s] for s in start if s in w2i]
- 
-        lsc = 0 
+
+        lsc = 0
         while lsc<lines:
             ip = np.array(pad_sequences([ipseq], maxlen=length, padding='pre'))
 
@@ -46,7 +48,7 @@ if option == 'Hindi':
             w = np.argmax(w)
             if i2w[w].strip() == '<sep>':
                 lsc+=1
-            start+=' '+ i2w[w] 
+            start+=' '+ i2w[w]
             ipseq.append(w)
         for i in start.split('<sep>'):
             st.text(i.strip())
@@ -55,11 +57,11 @@ if option == 'Hindi':
 
     input_text = st.text_input(label="Enter your initial text", value="जन्नत")
 
-    int_val = st.number_input('Number of lines', min_value=1, max_value=10, value=5, step=1)
+    int_val = st.number_input('Number of lines', min_value=5, max_value=12, value=8, step=1)
     if st.button('Generate'):
     
 
-        gen_poem(model, max_seq, tokenizer, idx_to_word, input_text, int_val)
+        gen_poem(model, max_seq, tokenizer, idx_to_word, input_text, int_val+2)
 
 elif option == 'English':
     ai = aitextgen(model_folder="trained_model")
@@ -69,7 +71,8 @@ elif option == 'English':
     # Taking the input from user
 
     if st.button('Generate'):
-        poem_text =  ai.generate_one(prompt = input_text, max_length=50)
+        poem_text =  ai.generate_one(prompt = input_text, max_length=50, )
         # Generating the text
         st.text(poem_text)
         # Displaying the text
+
