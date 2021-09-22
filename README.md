@@ -1,9 +1,10 @@
 # FALLABOUT-SRMMIC 21
 
 # POETRY-GENERATION
+## HINGLISH
 
-## DESCRIPTION
- We have developed a NLP(natural language processing) model which automatically generates a poem
+# DESCRIPTION
+ We have developed a [NLP](https://www.ibm.com/cloud/learn/natural-language-processing#:~:text=Natural%20language%20processing%20(NLP)%20refers,same%20way%20human%20beings%20can.)(natural language processing) model which automatically generates a poem
  based on the initial/promt text given as input by the user.
  
  # Motivation
@@ -24,21 +25,29 @@
  
  # Built with
   1. [Streamlit](https://streamlit.io/) for frontend
-  2. _________ for hindi poetry (*Need to fill*)
+  2. [tensorflow keras](https://www.tensorflow.org/api_docs/python/tf/keras) for hindi poetry
   3. [aitextgen](https://docs.aitextgen.io/) for english poetry
 
  # Deeper into the project
   The english poetry generation is developed with the help of an open-sourse library known as *aitextgen*.
   The famous [GPT-2](https://openai.com/blog/better-language-models/) transformer is used in this project, finetuned on **Shakespeares** poems and sonnets alone.
+  The hindi poetry generation is built with tensorflow keras. 
   The front-end is simply handled by streamlit.
-  **need some matter on hindi model**
+  
   
  # Installation
   The `app.py` file should be installed and download the model from [this link](https://drive.google.com/drive/folders/1kbYcl0piU_2O5SG7ndIFGDYH4TDuLd1c?usp=sharing). The trained_model folder
-  should specify the path to your downloaded model. Finally `streamlit run app.py` in your terminal and enjoy
+  should specify the path to your downloaded model. And you have to install trained_model_hindi from [this link](https://drive.google.com/drive/folders/17NzDdcCaHBwQCWbSmsUDpv-VLU_dzwZX?usp=sharing) and specify the path as above.
+  The trained_model_hindi forlder contains the trained model, tokenizer and etc. Similarly the trained_model folder for english also contains the model 
+  and uses the default built in GPT-2 transformer.
+  Finally `streamlit run app.py` in your terminal and enjoy
   the app.
-  
-  **need instructions for hindi**
+ 
   
  # Future works
-  
+  1. Planning on including a translator to slide easily between languages.
+  2. Introduce more poet based model in many languages.  
+
+# Authors
+ 1. Paras Rawat
+ 2. Daketi Yatin
